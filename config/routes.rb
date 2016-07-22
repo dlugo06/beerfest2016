@@ -1,15 +1,11 @@
 Rails.application.routes.draw do
+  resources :tickets
+  get 'boletos', to: 'tickets#index'
+
   root to: 'navigation#home'
-
-  get 'partners', to: 'navigation#partners'
-
-  get 'event', to: 'navigation#event'
-
-  get 'map', to: 'navigation#map'
-
-  get 'hotels', to: 'navigation#hotels'
-
-  get 'contact', to: 'navigation#contact'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'participantes', to: 'navigation#partners'
+  get 'evento', to: 'navigation#event'
+  get 'mapa', to: 'navigation#map'
+  get 'hoteles', to: 'navigation#hotels'
+  get 'contacto', to: 'navigation#contact'
 end
