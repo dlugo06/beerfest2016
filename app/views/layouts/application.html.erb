@@ -9,6 +9,14 @@
   </head>
 
   <body>
+    <ul class="nav navbar-nav">
+      <li><%=link_to 'Inicio', root_path %></li>
+      <li><%=link_to 'Participantes', partners_path %></li>
+      <li><%=link_to 'Evento', event_path %></li>
+      <li><%=link_to 'Mapa', map_path %></li>
+      <li><%=link_to 'Hoteles', hotels_path %></li>
+      <li><%=link_to 'Contacto', contact_path %></li>
+    </ul>
     <%= yield %>
   </body>
 </html>
