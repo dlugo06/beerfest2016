@@ -3,3 +3,29 @@
 <%= render 'form', ticket: @ticket %>
 
 <%= link_to 'Back', tickets_path %>
+
+
+
+
+<div class='card-wrapper'></div>
+
+<form id='payment-form'>
+  <%= text_field_tag 'number', nil, placeholder: 'Card Number' %>
+  <%= text_field_tag 'name', nil,  placeholder: 'Full Name' %>
+  <%= text_field_tag 'expiry', nil, placeholder: 'MM/YYYY' %>
+  <%= text_field_tag 'cvc', nil, placeholder: 'CVC' %>
+  <%= submit_tag 'Purchase' %>
+</form>
+<script>
+var card = new Card({
+    form: 'form#payment-form',
+    container: 'div.card-wrapper',
+    placeholders: {
+        number: '•••• •••• •••• ••••',
+        name: 'Full Name',
+        expiry: '••/••',
+        cvc: '•••'
+    },
+    debug: true
+});
+</script>
